@@ -1,0 +1,523 @@
+/* Existing CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: #ccc;
+    color: #444;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    width: 150px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.hero {
+    background: linear-gradient(to bottom right, #dedede, #f4e1f0);
+    text-align: center;
+    padding: 50px 20px;
+    color: #333;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background: #dcb5d8;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+}
+
+/* Parent container to align the image fields */
+.image-container {
+    display: flex;
+    justify-content: space-between; /* Equal spacing for left and right */
+    align-items: center;            /* Vertically align images */
+    width: 100%;
+    margin: 20px 0;                 /* Adds some spacing around the container */
+}
+
+/* Shared styles for left and right image fields */
+.image-field {
+    width: 45%;              /* Both fields take equal space */
+    height: 300px;           /* Fixed height for consistency */
+    overflow: hidden;        /* Ensure images don't overflow */
+    border: 2px solid #ddd;  /* Optional: Add a border for clarity */
+    border-radius: 8px;      /* Smooth corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Style images inside the fields */
+.image-field img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Makes images fill the field without distortion */
+    display: block;
+}
+
+/* Services Section */
+.services {
+    padding: 20px;
+    text-align: center;
+}
+
+.services h2 {
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 300px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 10px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+
+.card h3 {
+    margin: 10px 0;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #ccc;
+    color: #333;
+}
+
+
+/*about us
+/* About Us Page */
+.about-owner {
+    text-align: center;
+    margin: 40px 20px;
+}
+
+.owner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.owner-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%; /* Circular image */
+    object-fit: cover;
+    border: 4px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.owner-description {
+    text-align: center;
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+    padding: 0 20px;
+}
+
+.our-values {
+    text-align: center;
+    margin: 40px 20px;
+}
+
+.our-values h2 {
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.our-values ul {
+    list-style: none;
+    padding: 0;
+}
+
+.our-values li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+/* Journey Section */
+.our-journey {
+    text-align: center;
+    padding: 20px;
+    color: #555;
+    line-height: 1.8;
+    background-color: #f8f9fa;
+    margin: 20px 0;
+}
+
+/* Testimonials */
+.testimonials {
+    text-align: center;
+    padding: 20px;
+}
+
+.testimonials blockquote {
+    background: #fdfdfd;
+    border-left: 5px solid #dcb5d8;
+    padding: 15px 20px;
+    margin: 10px auto;
+    max-width: 600px;
+    font-style: italic;
+    color: #555;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.testimonials footer {
+    text-align: right;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+}
+
+/* Social Media */
+.social-media {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.social-media .social-links a {
+    margin: 0 10px;
+    color: #dcb5d8;
+    transition: color 0.3s;
+}
+
+.social-media .social-links a:hover {
+    color: #444;
+}
+
+/* Services Page */
+.services-overview {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.service-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card i {
+    color: #dcb5d8;
+    margin-bottom: 15px;
+}
+
+.service-card h2 {
+    margin: 10px 0;
+    color: #444;
+}
+
+.service-card p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Why Choose Us */
+.why-choose-us {
+    text-align: center;
+    margin: 40px 0;
+    padding: 20px;
+    background: #f8f9fa;
+}
+
+.choose-us-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.choose-us-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 180px;
+}
+
+.choose-us-item i {
+    color: #dcb5d8;
+    margin-bottom: 10px;
+}
+
+.choose-us-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Call-to-Action */
+.cta {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(to right, #dedede, #f4e1f0);
+    color: #333;
+}
+
+.cta h2 {
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+
+.cta p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.cta-button {
+    background: #dcb5d8;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background: #c38fb1;
+}
+
+/* Gallery Container */
+.gallery-container {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px; /* Space between thumbnails */
+    justify-items: center; /* Center thumbnails horizontally */
+    margin: 0 auto; /* Center the container on the page */
+    max-width: 80%; /* Set a maximum width for the gallery */
+}
+
+/* Gallery Thumbnails */
+.thumbnail {
+    width: 250px; /* Fixed width for all thumbnails */
+    height: 200px; /* Fixed height for all thumbnails */
+    object-fit: cover; /* Ensures images fit without distortion */
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.thumbnail:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Lightbox Overlay */
+.lightbox {
+    display: none; /* Hidden initially */
+    position: fixed; /* Cover the entire viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    z-index: 1000; /* Ensure it appears above all other content */
+}
+
+.lightbox-img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain; /* Ensure the image fits without cropping */
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #dcb5d8;
+}
+
+/* Contact Container */
+.contact-container {
+    display: flex; /* Horizontal alignment */
+    justify-content: space-between; /* Space between the two sections */
+    align-items: flex-start; /* Align items to the top */
+    gap: 20px; /* Space between the calendar and form */
+    margin: 40px auto;
+    max-width: 1200px; /* Limit overall width */
+}
+
+/* Calendar Section and Contact Form */
+.calendar-section, .contact-form {
+    flex: 1; /* Both sections take up equal space */
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    min-width: 45%; /* Ensures minimum width for smaller screens */
+}
+
+/* Calendar Section Specific */
+.calendar-section h2, .calendar-section h4 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.calendar-section h4 {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Contact Form Styling */
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #dcb5d8;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%; /* Full width for consistency */
+}
+
+button:hover {
+    background-color: #c38fb1;
+}
+
+#form-status {
+    margin-top: 10px;
+    color: green;
+    text-align: center;
+}
+
+/* Testimonial Wrapper */
+.testimonial-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 20px 0;
+}
+
+/* Slide Container */
+.testimonial-slide {
+    display: flex;
+    transition: transform 1s ease-in-out;
+    width: 100%; /* Prevent unnecessary space */
+}
+
+/* Individual Testimonial */
+.testimonial {
+    flex: 0 0 100%; /* Each testimonial occupies exactly 100% width */
+    text-align: center;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #333;
+    line-height: 1.5;
+    padding: 20px;
+    box-sizing: border-box;
+    white-space: normal;
+}
+
+
+
+
+
+
+

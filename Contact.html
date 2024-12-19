@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - 2-Lady Painters</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to CSS -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        // Initialize EmailJS
+        (function () {
+            emailjs.init("YOUR_EMAILJS_USER_ID"); // Replace with your EmailJS user ID
+        })();
+    </script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="DALL·E-2024-11-28-23.33.png" alt="2-Lady Painters Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contact Section with Calendar and Form -->
+    <section class="contact-container">
+        <!-- Calendar Section -->
+        <div class="calendar-section">
+            <h2>Schedule a Free Quote</h2>
+            <h4>(Choose a Zoom quote, or an in-person quote by selecting a date and time)</h4>
+            <!-- Calendly Embed -->
+            <div class="calendly-inline-widget" data-url="https://calendly.com/YOUR_CALENDLY_URL"
+                style="min-width:320px;height:700px;"></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <h2>Send Us a Message</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="6" placeholder="Enter your message here..."></textarea>
+
+                <button type="submit" id="send-button">Send</button>
+            </form>
+            <p id="form-status"></p>
+        </div>
+    </section>
+    </section>
+    <div class="company-contact">
+        <h3>Contact Information</h3>
+        <p><strong>Email:</strong> <a href="mailto:contact@2ladypainters.com">contact@2ladypainters.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+1234567890">(123) 456-7890</a></p>
+    </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 2-Lady Painters. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // EmailJS Integration
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Form inputs
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Send email via EmailJS
+            emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+                name: name,
+                phone: phone,
+                email: email,
+                message: message
+            })
+                .then(function (response) {
+                    document.getElementById('form-status').innerText = "Message sent successfully!";
+                    document.getElementById('contact-form').reset();
+                }, function (error) {
+                    document.getElementById('form-status').innerText = "Failed to send message. Please try again.";
+                });
+        });
+    </script>
+</body>
+
+</html>
